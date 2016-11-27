@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+      function draw(){
+        var canvas = document.getElementById('tutorial');
+        if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+          ctx.beginPath();
+          ctx.moveTo(200, 0);
+          ctx.lineTo(200, 400)
+          ctx.moveTo(200, 400);
+          ctx.stroke();
+          ctx.moveTo(0, 200);
+          ctx.lineTo(400, 200);
+          ctx.stroke();
+          ctx.closePath();
+          ctx.arc(200, 200, 100, 0, 2 * Math.PI);
+          ctx.stroke();
+        }
+      }
+    </script>
+    <style type="text/css">
+    </style>
+  </head>
+  <body onload="draw();">
+    <canvas id="tutorial" width="400" height="400"></canvas>
+  </body>
+</html>
